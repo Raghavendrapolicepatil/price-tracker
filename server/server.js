@@ -544,6 +544,9 @@ app.get('/history', async (req, res) => {
 // We first set up the database,
 // THEN start listening for requests.
 // Order matters!
+
+const PORT = process.env.PORT || 3000;
+
 // ─────────────────────────────────────────────
 async function startServer() {
   await setupDatabase();   // set up DB first
