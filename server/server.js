@@ -1,3 +1,16 @@
+const express = require('express');
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Server running 🚀');
+});
+
+app.listen(PORT, () => {
+  console.log(`🚀 PriceWatch server running on port ${PORT}`);
+});
+
 /*
 // ============================================================
 // server.js — Our Node.js + Express backend server
@@ -565,7 +578,3 @@ async function startServer() {
 startServer();
 */
 
-
-app.get('/',(req, res) => {
-  res.sed('server running ✅');
-});
