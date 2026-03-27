@@ -1,3 +1,4 @@
+/*
 // ============================================================
 // server.js — Our Node.js + Express backend server
 //
@@ -562,3 +563,9 @@ async function startServer() {
 
 // Call the function to start everything
 startServer();
+*/
+
+
+app.get('/',(req, res) => {
+  res.sed('server running ✅');
+});
