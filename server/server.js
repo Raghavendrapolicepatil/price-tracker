@@ -11,6 +11,19 @@ app.listen(PORT, () => {
   console.log(`🚀 PriceWatch server running on port ${PORT}`);
 });
 
+app.get('/history', async (req, res) => {
+  try {
+    // temporary test data
+    res.json({
+      history: [
+        { title: "Test Product", price: 999, site: "Amazon", fetched_at: new Date() }
+      ]
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 /*
 // ============================================================
 // server.js — Our Node.js + Express backend server
